@@ -73,7 +73,7 @@ pipeline{
         {
             steps{
                 echo"Deploy the application to a production server"
-                echo"Azure is also used in this stage. Aside from that AWS, ansible can also be use."
+                echo"Azure is also used in this stage. Aside from that AWS, ansible can also be used."
             }
         }
 
