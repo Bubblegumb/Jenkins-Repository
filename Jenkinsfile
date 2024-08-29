@@ -20,8 +20,7 @@ pipeline{
         stage("Code Analysis")
         {
             steps{
-                echo" Integrate a code analysis tool to analyse the code and ensure
-                it meets industry standards"
+                echo" Integrate a code analysis tool to analyse the code and ensure it meets industry standards"
                 echo"SonarQube can be useful in yhis case for continuous inspection of code qualoty and security."
             }
         }
