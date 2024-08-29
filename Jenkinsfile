@@ -53,8 +53,7 @@ pipeline{
         stage("Integration Tests on Staging")
         {
             steps{
-                echo"Run integration tests on the staging
-                environment to ensure the application functions as expected in a production-likeenvironment."
+                echo"Run integration tests on the staging environment to ensure the application functions as expected in a production-likeenvironment."
                 echo"Tools like JUnit and Selenium are again used after staging"
             }
             post{
