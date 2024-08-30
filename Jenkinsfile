@@ -35,11 +35,13 @@ pipeline{
                     mail to: "artmania260@gmail.com",
                     subject: "Build Status Email",
                     body: "The file is safe to use."
+                    attachlog: true;
                 }
                 failure{
                     mail to: "artmania260@gmail.com",
                     subject: "Build Status Email",
                     body: "Security issues found in the files presented."
+                    attachlog: true;
                 }
             }
         }
@@ -66,6 +68,7 @@ pipeline{
                     mail to: "artmania260@gmail.com",
                     subject: "Build Status Email",
                     body: "Integration was uncusseful and something didn't work as expected."
+                    attachlog: true;
                 }
             }
         }
