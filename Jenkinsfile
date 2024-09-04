@@ -28,20 +28,16 @@ pipeline {
             }
             post {
                 success {
-                    emailext(
-                        to: "artmania260@gmail.com",
-                        subject: "Build Status Email",
-                        body: "The file is safe to use.",
-                        attachLog: true
-                    )
+                    mail to: "artmania260@gmail.com",
+                    subject: "Build Status Email",
+                    body: "The file is safe to use.",
+                    attachLog: true
                 }
                 failure {
-                    emailext(
-                        to: "artmania260@gmail.com",
-                        subject: "Build Status Email",
-                        body: "Security issues found in the files presented.",
-                        attachLog: true
-                    )
+                    mail to: "artmania260@gmail.com",
+                    subject: "Build Status Email",
+                    body: "Security issues found in the files presented.",
+                    attachLog: true
                 }
             }
         }
@@ -58,20 +54,17 @@ pipeline {
             }
             post {
                 success {
-                    emailext(
-                        to: "artmania260@gmail.com",
-                        subject: "Build Status Email",
-                        body: "Integration was successful.",
-                        attachLog: true
-                    )
+                    mail to: "artmania260@gmail.com",
+                    subject: "Build Status Email",
+                    body: "Integration was successful.",
+                    attachLog: true
+
                 }
                 failure {
-                    emailext(
-                        to: "artmania260@gmail.com",
-                        subject: "Build Status Email",
-                        body: "Integration was unsuccessful and something didn't work as expected.",
-                        attachLog: true
-                    )
+                    mail to: "artmania260@gmail.com",
+                    subject: "Build Status Email",
+                    body: "Integration was unsuccessful and something didn't work as expected.",
+                    attachLog: true
                 }
             }
         }
