@@ -59,7 +59,7 @@ pipeline {
             post {
                 success {
                     emailext(
-                        mail to: "artmania260@gmail.com",
+                        to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "Integration was successful.",
                         attachLog: true
