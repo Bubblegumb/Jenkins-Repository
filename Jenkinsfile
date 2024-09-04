@@ -29,7 +29,6 @@ pipeline {
             post {
                 success {
                     emailext(
-                        attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "The file is safe to use.",
@@ -38,7 +37,6 @@ pipeline {
                 }
                 failure {
                     emailext(
-                        attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "Security issues found in the files presented.",
@@ -60,7 +58,6 @@ pipeline {
             post {
                 success {
                     emailext(
-                        attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "Integration was successful.",
@@ -68,7 +65,6 @@ pipeline {
                 }
                 failure {
                     emailext(
-                        attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "Integration was unsuccessful and something didn't work as expected.",
