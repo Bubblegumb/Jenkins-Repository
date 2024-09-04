@@ -29,6 +29,7 @@ pipeline {
             post {
                 success {
                     emailext(
+                        attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "The file is safe to use.",
