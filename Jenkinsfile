@@ -36,8 +36,7 @@ pipeline{
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "The file is safe to use."
-                        attachlog: true;
-                    )
+                        attachlog: true;)
                     
                 }
                 failure{
@@ -45,8 +44,7 @@ pipeline{
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "Security issues found in the files presented."
-                        attachlog: true;
-                    )
+                        attachlog: true;)
                     
                 }
             }
@@ -70,16 +68,14 @@ pipeline{
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "Integration was successful."
-                        attachlog: true;
-                    )
+                        attachlog: true;)
                 }
                 failure{
                     emailext(
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
                         body: "Integration was uncusseful and something didn't work as expected."
-                        attachlog: true;
-                    )
+                        attachlog: true;)
                     
                 }
             }
