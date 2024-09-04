@@ -32,15 +32,21 @@ pipeline{
             }
             post{
                 success{
-                    mail to: "artmania260@gmail.com",
-                    subject: "Build Status Email",
-                    body: "The file is safe to use."
+                    emailext(
+                        to: "artmania260@gmail.com",
+                        subject: "Build Status Email",
+                        body: "The file is safe to use."
+                        attachlog: true;
+                    )
                     
                 }
                 failure{
-                    mail to: "artmania260@gmail.com",
-                    subject: "Build Status Email",
-                    body: "Security issues found in the files presented."
+                    emailext(
+                        to: "artmania260@gmail.com",
+                        subject: "Build Status Email",
+                        body: "Security issues found in the files presented."
+                        attachlog: true;
+                    )
                     
                 }
             }
@@ -60,14 +66,20 @@ pipeline{
             }
             post{
                 success{
-                    mail to: "artmania260@gmail.com",
-                    subject: "Build Status Email",
-                    body: "Integration was successful."
+                    emailext(
+                        to: "artmania260@gmail.com",
+                        subject: "Build Status Email",
+                        body: "Integration was successful."
+                        attachlog: true;
+                    )
                 }
                 failure{
-                    mail to: "artmania260@gmail.com",
-                    subject: "Build Status Email",
-                    body: "Integration was uncusseful and something didn't work as expected."
+                    emailext(
+                        to: "artmania260@gmail.com",
+                        subject: "Build Status Email",
+                        body: "Integration was uncusseful and something didn't work as expected."
+                        attachlog: true;
+                    )
                     
                 }
             }
