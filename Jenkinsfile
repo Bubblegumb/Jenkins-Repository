@@ -28,7 +28,7 @@ pipeline {
             }
             post {
                 success {
-                    emailext(
+                    mail(
                         attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
@@ -37,7 +37,7 @@ pipeline {
                     )
                 }
                 failure {
-                    emailext(
+                    mail(
                         attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
@@ -59,7 +59,7 @@ pipeline {
             }
             post {
                 success {
-                    emailext(
+                    mail(
                         attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
@@ -67,7 +67,7 @@ pipeline {
                     )
                 }
                 failure {
-                    emailext(
+                    mail(
                         attachLog: true,
                         to: "artmania260@gmail.com",
                         subject: "Build Status Email",
